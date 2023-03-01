@@ -1,16 +1,16 @@
-
 package Model;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Pedido {
-     private int id_pedido;
+    private int id_pedido;
     private int id_cliente;
     private Date fecha;
     private double total;
     private String estado;
-    
-    public Pedido(){}
+
+    public Pedido() {
+    }
 
     public Pedido(int id_pedido, int id_cliente, Date fecha, double total, String estado) {
         this.id_pedido = id_pedido;
@@ -59,6 +59,4 @@ public class Pedido {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    
-    
 }

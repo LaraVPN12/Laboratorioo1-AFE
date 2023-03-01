@@ -1,4 +1,3 @@
-
 package Model;
 
 public class Cliente {
@@ -7,7 +6,7 @@ public class Cliente {
     private String direccion;
     private String telefono;
     private String email;
-    
+
     public Cliente(){}
 
     public Cliente(int id_cliente, String nombre, String direccion, String telefono, String email) {
@@ -57,6 +56,4 @@ public class Cliente {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    
 }
