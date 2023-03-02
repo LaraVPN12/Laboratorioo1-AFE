@@ -1,2 +1,3 @@
-com\mycompany\laboratorio01\JAXRSConfiguration.class
 com\mycompany\laboratorio01\resources\JavaEE8Resource.class
+Controller\clienteController.class
+com\mycompany\laboratorio01\JAXRSConfiguration.class
