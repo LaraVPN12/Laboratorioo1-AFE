@@ -41,7 +41,7 @@ public class ClienteDAO implements IClienteCRUD {
     @Override
     public List getClientes() {
         List<Cliente> list = new ArrayList<>();
-        String sql = "SELECT * FROM Clientes";
+        String sql = "SELECT * FROM Clientes ORDER BY id_cliente ASC";
         return getClienteList(list, sql);
     }
 
@@ -77,5 +77,12 @@ public class ClienteDAO implements IClienteCRUD {
         ps = conn.prepareStatement(sql);
         ps.executeUpdate();
         return true;
+    }
+
+    @Override
+    public List getClientePorNombre(String nombre) throws ClassNotFoundException, SQLException {
+        List<Cliente> list = new ArrayList<>();
+        String sql = "SELECT * FROM Clientes WHERE nombre = '" + nombre + "'";
+        return getClienteList(list, sql);
     }
 }

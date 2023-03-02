@@ -9,3 +9,7 @@ function closeModal(id) {
     modal.style.display = "none";
     modal.style.opacity = 0;
 }
+
+function cleanForm(id) {
+  document.getElementById(id).reset();
+}

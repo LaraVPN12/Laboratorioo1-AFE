@@ -96,8 +96,8 @@
                                                 <div class="text-md text-center"><c:out value="${cliente.getDireccion()}"/></div>
                                             </td>
                                             <td class="p-2 whitespace-nowrap">
-                                                <button class="bg-gray-200/40 rounded-full p-2 hover:bg-gray-300 transition-3 text-red-500">del</button>
-                                                <button class="bg-gray-200/40 rounded-full p-2 hover:bg-gray-300 transition-3 text-blue-500">update</button>
+                                                <a class="bg-gray-200/40 rounded-full p-2 hover:bg-gray-300 transition-3 text-red-500" href="/Laboratorio01/clienteController?action=delete&id=<c:out value='${cliente.getId_cliente()}'/>"/>Delete</a>
+                                                <a class="bg-gray-200/40 rounded-full p-2 hover:bg-gray-300 transition-3 text-blue-500" href="/Laboratorio01/views/updateClienteForm.jsp?id=<c:out value='${cliente.getId_cliente()}'/>"/>Update</a>
                                             </td>
                                         </tr>
                                     <div><c:out value="${name}"/></div>
@@ -115,7 +115,7 @@
             </svg>
         </button>
         <!-- Modal -->
-        
+
         <div id="add-client-modal" class="fixed top-0 left-0 right-0 bottom-0 zIndex-10 w-full h-screen bg-slate-900/80 flex justify-center items-center ">
             <div class="flex items-center justify-center p-12 bg-white">
 
@@ -126,7 +126,7 @@
                         </button>
                     </div>
                     <!-- Inicio de Form-->
-                    <form action="../clienteController?action=add">
+                    <form action="../clienteController?action=add" id="add-client-form">
                         <div class="-mx-3 flex flex-wrap">
                             <div class="w-full px-3 sm:w-1/2">
                                 <div class="mb-5">
@@ -209,7 +209,9 @@
                                 value="add"
                                 name="action"
                                 />
+
                         </div>
+
                     </form>
                 </div>
             </div>
