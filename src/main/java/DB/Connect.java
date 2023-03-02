@@ -10,7 +10,7 @@ public class Connect {
     public static Connection getConnection() throws ClassNotFoundException, SQLException{
         Connection connection;
         Class.forName("org.postgresql.Driver");
-        connection=DriverManager.getConnection("jdbc:postgresql://localhost:7884/railway", "postgres", "jZ0RLFdiiwyETRUp85FI");
+        connection=DriverManager.getConnection("jdbc:postgresql://containers-us-west-63.railway.app:7884/railway", "postgres", "jZ0RLFdiiwyETRUp85FI");
         return connection;
     }
 }

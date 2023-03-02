@@ -13,7 +13,7 @@
             </div>
 
             <div class="mt-6 flex items-center justify-center gap-4">
-                <a href="./views/cliente.jsp" class="transform rounded-md bg-indigo-600/95 px-5 py-3 font-medium text-white transition-colors hover:bg-indigo-700">Get started for free</a>
+                <a href="Cliente?action=getall" class="transform rounded-md bg-indigo-600/95 px-5 py-3 font-medium text-white transition-colors hover:bg-indigo-700">Get started for free</a>
             </div>
         </div>
     </section>
