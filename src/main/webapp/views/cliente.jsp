@@ -1,7 +1,14 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<jsp:include page="../header.jsp"/>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script defer src="../index.js"></script>
+    <title>Cliente</title>
+</head>
+<body onload="closeModal('add-client-modal')">
 <div style="max-width:700px; margin: 100px auto;">
     <form class="flex items-center bg-transparent">
 
@@ -25,8 +32,7 @@
                  xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-            Search
+            </svg>Search
         </button>
     </form>
 
@@ -65,10 +71,7 @@
                         <tr>
                             <td class="p-2 whitespace-nowrap">
                                 <div class="flex items-center">
-                                    <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full"
-                                                                                           src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-05.jpg"
-                                                                                           width="40" height="40"
-                                                                                           alt="Alex Shatov"></div>
+                                    <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-05.jpg" width="40" height="40" alt="Alex Shatov"></div>
                                     <div class="font-medium text-gray-800">Alex Shatov</div>
                                 </div>
                             </td>
@@ -82,21 +85,14 @@
                                 <div class="text-lg text-center">??</div>
                             </td>
                             <td class="p-2 whitespace-nowrap">
-                                <button class="bg-gray-200/40 rounded-full p-2 hover:bg-gray-300 transition-3 text-red-500">
-                                    del
-                                </button>
-                                <button class="bg-gray-200/40 rounded-full p-2 hover:bg-gray-300 transition-3 text-blue-500">
-                                    update
-                                </button>
+                                <button class="bg-gray-200/40 rounded-full p-2 hover:bg-gray-300 transition-3 text-red-500">del</button>
+                                <button class="bg-gray-200/40 rounded-full p-2 hover:bg-gray-300 transition-3 text-blue-500">update</button>
                             </td>
                         </tr>
                         <tr>
                             <td class="p-2 whitespace-nowrap">
                                 <div class="flex items-center">
-                                    <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full"
-                                                                                           src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-06.jpg"
-                                                                                           width="40" height="40"
-                                                                                           alt="Philip Harbach"></div>
+                                    <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-06.jpg" width="40" height="40" alt="Philip Harbach"></div>
                                     <div class="font-medium text-gray-800">Philip Harbach</div>
                                 </div>
                             </td>
@@ -110,12 +106,8 @@
                                 <div class="text-lg text-center">??</div>
                             </td>
                             <td class="p-2 whitespace-nowrap">
-                                <button class="bg-gray-200/40 rounded-full p-2 hover:bg-gray-300 transition-3 text-red-500">
-                                    del
-                                </button>
-                                <button class="bg-gray-200/40 rounded-full p-2 hover:bg-gray-300 transition-3 text-blue-500">
-                                    update
-                                </button>
+                                <button class="bg-gray-200/40 rounded-full p-2 hover:bg-gray-300 transition-3 text-red-500">del</button>
+                                <button class="bg-gray-200/40 rounded-full p-2 hover:bg-gray-300 transition-3 text-blue-500">update</button>
                             </td>
                         </tr>
 
@@ -126,21 +118,20 @@
         </div>
     </div>
 </section>
-<button id="open-modal"
-        class="fixed right-10 bottom-20 p-5 rounded-full bg-blue-600 text-white hover:bg-blue-700 shadow-lg transition">
+<button id="open-modal" class="fixed right-10 bottom-20 p-5 rounded-full bg-blue-600 text-white hover:bg-blue-700 shadow-lg transition" onclick="openModal('add-client-modal')">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
     </svg>
 </button>
 
-<div id="modal"
-     class="fixed  top-0 left-0 right-0 bottom-0 zIndex-10 w-full h-screen bg-slate-900/80 flex justify-center items-center">
+<div id="add-client-modal" class="fixed top-0 left-0 right-0 bottom-0 zIndex-10 w-full h-screen bg-slate-900/80 flex justify-center items-center ">
     <div class="flex items-center justify-center p-12 bg-white">
 
         <div class="mx-auto w-full max-w-[550px]">
             <div class="w-full flex justify-end">
-                <button id="close-modal" class="text-xl text-gray-400"
-                >
+                <button id="close-modal" class="text-xl text-gray-400" onclick="closeModal('add-client-modal')">
+
+
                     X
                 </button>
             </div>
@@ -219,6 +210,7 @@
                 </div>
 
 
+
                 <div>
                     <button
                             class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
@@ -233,6 +225,5 @@
 </div>
 
 
-<script src="../index.js"></script>
 </body>
 </html>
