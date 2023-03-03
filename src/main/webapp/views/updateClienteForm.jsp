@@ -17,6 +17,19 @@
         <link rel="stylesheet" href="https://cdn.tailwindcss.com">
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <script lang="Javascript">
+            function openModal(id) {
+    const modalOpen = document.getElementById(id);
+    modalOpen.style.display = "flex";
+    modalOpen.style.opacity = 1;
+}
+
+function closeModal(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = "none";
+    modal.style.opacity = 0;
+}
+        </script>
     </head>
     <body>
         <%!Cliente cliente = new Cliente();%>
@@ -124,7 +137,16 @@
                                 name="action"
                                 />
                         </div>
+                            
+                            
                     </form>
+                            <div class="my-5">
+                                  <a href="/Laboratorioo1-AFE/views/cliente.jsp" class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none">
+                                    Cancel
+                                    </a >
+                                    
+                            
+                        </div>
                 </div>
             </div>
         </div>

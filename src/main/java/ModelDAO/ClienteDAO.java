@@ -85,4 +85,16 @@ public class ClienteDAO implements IClienteCRUD {
         String sql = "SELECT * FROM Clientes WHERE nombre = '" + nombre + "'";
         return getClienteList(list, sql);
     }
+    
+    public String getNombreById(int id_cliente) throws ClassNotFoundException, SQLException {
+        String response = "";
+        String sql = "SELECT nombre FROM Clientes WHERE id_cliente = '" + id_cliente + "'";
+        conn = cn.getConnection();
+        ps = conn.prepareStatement(sql);
+        rs = ps.executeQuery();
+        while (rs.next()) {
+            response += rs.getString("nombre");
+        }
+        return response;
+    }
 }
