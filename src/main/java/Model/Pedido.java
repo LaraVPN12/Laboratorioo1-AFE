@@ -5,16 +5,18 @@ import java.util.Date;
 public class Pedido {
     private int id_pedido;
     private int id_cliente;
-    private Date fecha;
+    private Cliente cliente;
+    private String fecha;
     private double total;
     private String estado;
 
     public Pedido() {
     }
 
-    public Pedido(int id_pedido, int id_cliente, Date fecha, double total, String estado) {
+    public Pedido(int id_pedido, int id_cliente, Cliente cliente, String fecha, double total, String estado) {
         this.id_pedido = id_pedido;
         this.id_cliente = id_cliente;
+        this.cliente = cliente;
         this.fecha = fecha;
         this.total = total;
         this.estado = estado;
@@ -36,11 +38,11 @@ public class Pedido {
         this.id_cliente = id_cliente;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
@@ -58,5 +60,13 @@ public class Pedido {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 }
